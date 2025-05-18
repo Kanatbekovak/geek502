@@ -1,0 +1,95 @@
+:root {
+  --color-white: #8a8383;
+  --color-gray: #434141;
+  --primary-color: yellow;
+  --secondary-color: green;
+  --tertiary-color: red;
+  --border: 1px solid var(--color-gray);
+  --input-height: 42px;
+  --container-width: 500px;
+  --container-padding-width: 500px;
+  --border-radius: 10px;
+}
+
+.h1 {
+  color: var(--primary-color);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #ffffff;
+}
+
+.button {
+  background-color: blue;
+}
+
+.color {
+  color: blue;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: blue;
+  max-width: calc(var(--container-width) + var(--container-padding-width) * 2);
+  border: var(--border);
+  border-radius: var(--border-radius);
+}
+
+.btn {
+  background-color: blue;
+  color: white;
+  font-size: 16px;
+  padding: 10px;
+}
+.btn:hover {
+  background-color: transparent;
+}
+
+@media (max-width: 768px) {
+  body {
+    background-color: red;
+  }
+}
+.banner {
+  text-transform: uppercase;
+  color: #000;
+  font-weight: 700;
+  font-family: "Heebo", sans-serif;
+}
+
+.banner-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
+  font-size: 10px;
+  line-height: 127%;
+}
+
+.banner-info:before {
+  content: "";
+  width: clamp(60px, 10.1vw, 194px);
+  aspect-ratio: 1;
+  margin-right: 30px;
+  background: url("images/vector.svg") center/contain;
+}
+
+.title {
+  font-size: clamp(60px, 60px + 300 * (100vw - 360px) / 1560, 360px);
+  line-height: 1;
+}
